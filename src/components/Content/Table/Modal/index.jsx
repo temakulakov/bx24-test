@@ -21,7 +21,7 @@ const ModalComponent = (props) => {
         setShow(false);
     };
     return <>
-        <div className={active[props.theme] === props.level + 1 ? "round active" : "round "} onClick={handleShow}>
+        <div className={active[props.theme] === props.level + 1 ? "round active" : "round "} onMouseEnter={handleShow}>
         </div>
         <Modal show={show} onHide={handleHide} animation={false} size={"lg"}>
             <Modal.Header closeButton >
