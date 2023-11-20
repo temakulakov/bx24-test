@@ -19,7 +19,7 @@ const Navigation = () => {
         setStepState((state) => state - 1);
     const checkInputError = () => {
         let error = 0
-        error += fioString.fio.split(' ').length < 3 ? 1 : 0;
+        error += fioString.fio.split(' ').length < 2 ? 1 : 0;
         error += fioString.state.length < 3 ? 2 : 0;
         return error;
     }
