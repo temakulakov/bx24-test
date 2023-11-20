@@ -1,5 +1,5 @@
 import "./Modal.css";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useRecoilState} from "recoil";
 import {testFormState} from "../../../../store";
 import {Button, Modal} from "react-bootstrap";
@@ -20,8 +20,14 @@ const ModalComponent = (props) => {
         setActive(() => active.map((el, index) => index === props.theme ? props.level + 1 : el));
         setShow(false);
     };
+
+    useEffect(() => {
+        localStorage.setItem('testFormState', JSON.stringify(active));
+    }, [active]);
+
     return <>
-        <div className={active[props.theme] === props.level + 1 ? "round active" : "round "} onMouseEnter={handleShow}>
+        <div className={active[props.theme] === props.level + 1 ? "round active" : "round "} onClick={handleShow} onMouseEnter={(e)=> {
+        }}>
         </div>
         <Modal show={show} onHide={handleHide} animation={false} size={"lg"}>
             <Modal.Header closeButton >

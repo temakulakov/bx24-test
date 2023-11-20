@@ -24,7 +24,9 @@
     flex-direction: column;
 }
 
-
+td {
+    transition: all .5s ease !important;
+}
 .red td {
     background-color: #FFCBD0 !important;
 }

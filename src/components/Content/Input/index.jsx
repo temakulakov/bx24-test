@@ -2,12 +2,22 @@ import "./Input.css"
 import {Form} from "react-bootstrap";
 import { useRecoilState } from "recoil";
 import {inputFormState} from "../../../store";
-import React from "react";
+import React, {useEffect} from "react";
 import * as formik from "formik";
 import * as yup from "yup";
 
 const Input = () => {
     const [ stateValues, setStateValues ] = useRecoilState(inputFormState);
+
+    useEffect(() => {
+        setStateValues(() => JSON.parse(localStorage.getItem('inputFormState')));
+        return () => {
+            localStorage.setItem("inputFormState", JSON.stringify(stateValues))
+        };
+    }, []);
+    useEffect(() => {
+        localStorage.setItem("inputFormState", JSON.stringify(stateValues))
+    }, [stateValues]);
 
     return <div style={{display: "flex", flexDirection: "column"}}>
         <h2 style={{textAlign: "center"}}>Заполните данные</h2>

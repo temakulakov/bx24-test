@@ -12,9 +12,13 @@ const Roller = () => {
             }
             case 1:
                 return {
-                    strokeDasharray: ".5, 1"
+                    strokeDasharray: ".33, 1"
                 }
             case 2:
+                return {
+                    strokeDasharray: ".66, 1"
+                }
+            case 3:
                 return {
                     strokeDasharray: "1.1, 1"
                 }
