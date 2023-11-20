@@ -1,11 +1,10 @@
 import "./Navigation.css"
-import {useRecoilState, useResetRecoilState, useSetRecoilState} from "recoil";
+import {useRecoilState} from "recoil";
 import {inputFormState, stepFormState, testFormErrorState, testFormState} from "../../store";
 import {Button, Modal} from "react-bootstrap";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 import { capitalize } from "lodash";
-import {stringify} from "uuid";
 
 const Navigation = () => {
     const [ show, setShow ] = useState(false)
@@ -14,10 +13,6 @@ const Navigation = () => {
     const [fioString, setFioString] = useRecoilState(inputFormState);
     const [testForm, setTestForm] = useRecoilState(testFormState);
     const [testFormError, setTestFormError] = useRecoilState(testFormErrorState)
-    const resetStepFormState = useResetRecoilState(stepFormState);
-    const resetInputFormState = useResetRecoilState(inputFormState);
-    const resetTestFormState = useResetRecoilState(testFormState);
-    const resetTestFormErrorState = useResetRecoilState(testFormErrorState);
 
     const backPage = () =>
         setStepState((state) => state - 1);
@@ -46,15 +41,24 @@ const Navigation = () => {
 
             return 0;
         }
-        localStorage.setItem("inputFormState", JSON.stringify(fioString));
         setStepState((state) => state + 1);
-        localStorage.setItem("stepFormState", JSON.stringify(stepState));
         setFioString(() => {
+            localStorage.setItem("inputFormState", JSON.stringify({
+                error: error,
+                state: fioString.state[0].toUpperCase() + fioString.state.slice(1),
+                fio: fioString.fio?.split(' ').map((word) => capitalize(word)).join(' ')
+            }));
             return {
                 error: error,
                 state: fioString.state[0].toUpperCase() + fioString.state.slice(1),
                 fio: fioString.fio?.split(' ').map((word) => capitalize(word)).join(' ')
         }});
+
+
+        localStorage.setItem("inputFormState", JSON.stringify(fioString));
+        localStorage.setItem("stepFormState", JSON.stringify(stepState));
+        localStorage.setItem("inputFormState", JSON.stringify(fioString));
+
 
     }
     const handleShow = () => {
@@ -66,19 +70,23 @@ const Navigation = () => {
         });
         setTestFormError(() => errorss);
         errorss.length > 0 ? setShow(false) : setShow(true);
+
+
     }
     const handleHide = () => {
         setShow(false);
 
     }
+    useEffect(() => {
+        localStorage.setItem('inputFormState', JSON.stringify({
+            fio: fioString.fio,
+            state: fioString.state,
+            error: fioString.error,
+        }));
+    }, [fioString]);
 
     const handleSend = () => {
         setShow(false);
-        localStorage.clear();
-         // resetStepFormState();
-         // resetInputFormState();
-         // resetTestFormState();
-         // resetTestFormErrorState();
         setFioString(() => {
             return {
                 error: false,
@@ -87,6 +95,16 @@ const Navigation = () => {
             }});
         setTestForm(() => [0, 0, 0, 0, 0, 0]);
         setStepState(0);
+
+
+        localStorage.setItem("inputFormState", JSON.stringify({
+            error: false,
+            state: "",
+            fio: "",
+        }));
+
+        localStorage.setItem("stepFormState", JSON.stringify(0));
+        localStorage.setItem("testFormState", JSON.stringify([0, 0, 0, 0, 0, 0]));
     }
 
 

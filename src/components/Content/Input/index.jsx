@@ -3,9 +3,6 @@ import {Form} from "react-bootstrap";
 import { useRecoilState } from "recoil";
 import {inputFormState} from "../../../store";
 import React, {useEffect} from "react";
-import * as formik from "formik";
-import * as yup from "yup";
-
 const Input = () => {
     const [ stateValues, setStateValues ] = useRecoilState(inputFormState);
 
@@ -16,7 +13,12 @@ const Input = () => {
         };
     }, []);
     useEffect(() => {
-        localStorage.setItem("inputFormState", JSON.stringify(stateValues))
+        localStorage.setItem('inputFormState', JSON.stringify({
+            fio: stateValues.fio,
+            state: stateValues.state,
+            error: stateValues.error,
+        }));
+
     }, [stateValues]);
 
     return <div style={{display: "flex", flexDirection: "column"}}>
