@@ -1,0 +1,30 @@
+.left-row {
+    vertical-align: middle !important;
+}
+
+.round {
+    /*display: inline-block;*/
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+.head-row {
+    width: 110px;
+    text-align: center;
+}
+
+.head-row:first-child {
+    width: 110px;
+    text-align: start;
+
+}
+.roots{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.red td:first-child {
+    background-color: #FFCBD0 !important;
+}

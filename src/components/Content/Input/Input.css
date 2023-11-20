@@ -1,0 +1,17 @@
+.input {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-control {
+}
+
+#formGroupFIO {
+    text-transform: capitalize;
+}
+
+#formGroupState {
+    text-transform: capitalize;
+}

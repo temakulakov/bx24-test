@@ -1,0 +1,27 @@
+#progress {
+    transform: translateY(-2px) rotate(-90deg);
+    /*transform: rotate(-90deg);*/
+}
+
+.roller-bg {
+    stroke: #0D6EFD;
+    opacity: 0.3;
+}
+
+.roller-indicator {
+    stroke: #0D6EFD;
+    transition: all .5s ease;
+}
+
+circle {
+    stroke-dashoffset: 0;
+    stroke-width: 15%;
+    fill: none;
+}
+
+#progress .indicator {
+    stroke: white;
+}
+.roller {
+    display: flex;
+}
