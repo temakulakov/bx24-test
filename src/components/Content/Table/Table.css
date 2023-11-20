@@ -25,6 +25,14 @@
 }
 
 
-.red td:first-child {
+.red td {
     background-color: #FFCBD0 !important;
+}
+
+.red td:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.red td:last-child {
+    border-radius: 0 5px 5px 0;
 }

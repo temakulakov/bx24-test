@@ -5,7 +5,7 @@ import {headRowText, leftColText, detailes} from "../../../store/data";
 import Modal from "./Modal";
 import { v4 } from 'uuid';
 import { useRecoilState } from "recoil";
-import {testFormErrorState} from "../../../store/atoms";
+import {testFormErrorState} from "../../../store";
 const TableComp = () => {
     const [errors, setErrors] = useRecoilState(testFormErrorState);
     return <div className={"roots"}>
@@ -23,7 +23,7 @@ const TableComp = () => {
                             {leftColText.map((el, index) => {
                                 return <tr key={v4()} className={errors.includes(index) ? "red" : ""} >
                                     <td className={"left-row"}>{el}</td>
-                                    {detailes[index].map((elem, ind) => <td className={"round"} key={v4()}><Modal  theme={index} level={ind}>
+                                    {detailes[index].map((elem, ind) => <td key={v4()}><Modal  theme={index} level={ind}>
                                             <ol>
                                                 {elem.map((element, ind) => <li key={v4()}>{element}</li>)}
                                             </ol>
