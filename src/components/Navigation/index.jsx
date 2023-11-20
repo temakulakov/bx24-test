@@ -5,6 +5,7 @@ import {Button, Modal} from "react-bootstrap";
 import React, {useEffect, useState} from "react";
 
 import { capitalize } from "lodash";
+import crmLeadAdd from "../../bx24-api/crm.lead.add";
 
 const Navigation = () => {
     const [ show, setShow ] = useState(false)
@@ -86,6 +87,8 @@ const Navigation = () => {
     }, [fioString]);
 
     const handleSend = () => {
+        crmLeadAdd(fioString.fio, fioString.state, testForm);
+
         setShow(false);
         setFioString(() => {
             return {
