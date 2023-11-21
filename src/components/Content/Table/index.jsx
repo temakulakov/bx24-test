@@ -22,7 +22,7 @@ const TableComp = () => {
                             {leftColText.map((el, index) => {
                                 return <tr key={v4()} className={errors.includes(index) ? "red" : ""} >
                                     <td className={"left-row"}>{el}</td>
-                                    {detailes[index].map((elem, ind) => <td key={v4()}><Modal  theme={index} level={ind}>
+                                    {detailes[index].map((elem, ind) => <td className={"tri"} key={v4()}><Modal  theme={index} level={ind}>
                                             <ol>
                                                 {elem.map((element, ind) => <li key={v4()}>{element}</li>)}
                                             </ol>

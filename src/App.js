@@ -6,6 +6,9 @@ import Content from "./components/Content";
 import {useEffect} from "react";
 import {RecoilRoot} from "recoil";
 
+import image from "./confitty.gif";
+
+
 function App() {
     useEffect(() => {
 
@@ -14,7 +17,7 @@ function App() {
   return (
       <RecoilRoot>
     <Container>
-      <Row><Header/></Row>
+        <Row><Header/></Row>
       <Row className={"root-content"}><Content/></Row>
       <Row ><Col ><Navigation/></Col></Row>
     </Container>

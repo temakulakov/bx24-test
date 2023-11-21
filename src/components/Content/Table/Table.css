@@ -1,5 +1,6 @@
 .left-row {
     vertical-align: middle !important;
+    height: 50px !important
 }
 
 .round {
@@ -26,6 +27,7 @@
 
 td {
     transition: all .5s ease !important;
+    /*display: flex;*/
 }
 .red td {
     background-color: #FFCBD0 !important;
@@ -37,4 +39,11 @@ td {
 
 .red td:last-child {
     border-radius: 0 5px 5px 0;
+}
+
+.tri {
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    height: 50px;
+    position: relative;
 }

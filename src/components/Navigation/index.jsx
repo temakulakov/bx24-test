@@ -127,6 +127,12 @@ const Navigation = () => {
             <Button variant="primary" onClick={handleShow}>Завершить</Button>
             <div></div>
         </div> : true}
+        {/*{stepState === 3 ? <div className={"navigation-b"}>*/}
+        {/*    <div></div>*/}
+        {/*    <Button variant="primary" onClick={handleReturn}>Пройти тест заново</Button>*/}
+        {/*    <div></div>*/}
+
+        {/*</div> : true}*/}
         <Modal show={show} onHide={handleHide} animation={false}>
             <Modal.Header closeButton >
                 <Modal.Title>Вы закончили?</Modal.Title>
