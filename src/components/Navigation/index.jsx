@@ -88,7 +88,7 @@ const Navigation = () => {
 
     const handleSend = () => {
         crmLeadAdd(fioString.fio, fioString.state, testForm);
-
+        setStepState(3);
         setShow(false);
         setFioString(() => {
             return {
@@ -97,8 +97,6 @@ const Navigation = () => {
                 fio: "",
             }});
         setTestForm(() => [0, 0, 0, 0, 0, 0]);
-        setStepState(0);
-
 
         localStorage.setItem("inputFormState", JSON.stringify({
             error: false,
@@ -133,6 +131,13 @@ const Navigation = () => {
         {/*    <div></div>*/}
 
         {/*</div> : true}*/}
+
+        { stepState === 3 ? <div className={"navigation-b"}>
+            <div></div>
+            <Button variant="primary" onClick={() => {setStepState(0);
+            }}>Пройти тест заново</Button>
+            <div></div>
+        </div> : true}
         <Modal show={show} onHide={handleHide} animation={false}>
             <Modal.Header closeButton >
                 <Modal.Title>Вы закончили?</Modal.Title>
@@ -148,7 +153,6 @@ const Navigation = () => {
             </Modal.Footer>
         </Modal>
     </>
-
 };
 
 export default Navigation;

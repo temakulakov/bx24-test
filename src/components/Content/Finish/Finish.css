@@ -1,0 +1,11 @@
+.finish {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.finish img {
+    height: 40px;
+    width: auto;
+    margin-left: 10px;
+}
