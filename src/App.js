@@ -7,11 +7,14 @@ import {useEffect} from "react";
 import {RecoilRoot} from "recoil";
 
 import image from "./confitty.gif";
+import axios from "axios";
 
 
 function App() {
     useEffect(() => {
-
+        // const url = `https://gagawa.bitrix24.ru/rest/9/imsk3z7t8hjyhtc2/crm.lead.userfield.get?` +
+        //     `fields['UF_CRM_1699599951990']`
+        // axios.post(url).then((resp) => console.log(resp));
     }, []);
 
   return (
