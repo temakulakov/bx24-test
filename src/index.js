@@ -4,7 +4,34 @@ import './index.css';
 import App from './App';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from "axios";
 
+// BX24.callMethod(
+//     "crm.dealcategory.list",
+//     {
+//         order: { "SORT": "ASC" },
+//         filter: { "IS_LOCKED": "N" }, //Y - все направления, N - все направления кроме удаленных. Удаленные направления не удаляются с базы навсегда а только блокируются.
+//         select: [ "ID", "NAME", "SORT" ]
+//     },
+//     function(result)
+//     {
+//         if(result.error())
+//             console.error(result.error());
+//         else
+//         {
+//             console.dir(result.data());
+//             if(result.more())
+//                 result.next();
+//         }
+//     }
+// );
+
+axios.post("https://gagawa.bitrix24.ru/rest/9/imsk3z7t8hjyhtc2/crm.deal.fields").then((resp) => {
+    console.log(resp)
+});
+axios.post("https://gagawa.bitrix24.ru/rest/9/imsk3z7t8hjyhtc2/crm.deal.list").then((resp) => {
+    console.log(resp)
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 if (localStorage.getItem('testFormState') === null) {

@@ -6,7 +6,7 @@ const Finish = () => {
         <h2>
             {`Поздравляем! Данные успешно отправлены`}
         </h2>
-        <img src={img} alt={""}/>
+        <img src={img} alt={"smile"}/>
     </div>
 };
 
