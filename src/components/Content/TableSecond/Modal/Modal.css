@@ -1,0 +1,160 @@
+.modal-window {
+    background-color: white;
+
+}
+
+.modal-window-body {
+
+}
+
+.modal-window-title {
+
+}
+
+.modal-window-showing {
+
+}
+
+.round {
+    border-radius: 50%;
+    background-color:#F2F2F2 ;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all .5s ease !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.active {
+    background-color:#0D6EFD ;
+}
+
+.active:hover {
+    background-color: #095ED7;
+}
+
+@keyframes ani {
+    0% {transform: translateY(-15px);opacity: 0;padding: 18px; padding-bottom: 10px; border-radius:7px;width: 20px;
+        height: 20px;}
+    100% {
+        transform: translateY(-1px);
+        opacity: 1;
+        padding: 18px;
+        padding-bottom: 10px;
+        margin-bottom: 5px;
+        border-radius: 7px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@keyframes ani-end {
+    0% {transform: translateY(0);opacity: 1;background-color: white;padding: 18px; padding-bottom: 10px; border-radius:7px;}
+    100% {transform: translateY(10%);opacity: 0;background-color: #f8f9fa;padding: 18px;
+        padding-bottom: 10px;
+        margin-bottom: 5px;
+        border-radius: 7px;}
+}
+.body-text {
+    white-space: pre-wrap;
+    text-align: justify;
+}
+
+.modal-body {
+    padding-right: 35px !important;
+}
+.navigation {
+    display: flex !important;
+    justify-content: space-between !important;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+.roller-indicatorr {
+    stroke-dasharray: 0, 1;
+}
+
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkmark {
+    /*transform: translateX(30px) ;*/
+    position: absolute;
+    top: 6px;
+    left: 37px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    stroke-width: 2;
+    stroke: white;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #0D6EFD;
+    margin: auto;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+    z-index: 10;
+}
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #0D6EFD;
+    fill: none;
+    animation: stroke .6s ease forwards;
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke .3s ease .8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #0D6EFD;
+    }
+}
+
+/*.progress {*/
+/*    transform: translateY(-2px) rotate(-90deg);*/
+/*    !*transform: rotate(-90deg);*!*/
+/*    cursor: pointer;*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*}*/
+/*.progress .indicator {*/
+/*    stroke: white;*/
+
+/*}*/
+
+.pr {
+    transform: translateX(23px)  rotate(-90deg);
+    position: absolute !important;
+    top: 0;
+}

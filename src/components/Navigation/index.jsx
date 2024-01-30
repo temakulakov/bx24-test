@@ -122,6 +122,10 @@ const Navigation = () => {
         </div> : true}
         {stepState === 2 ? <div className={"navigation-b"}>
             <Button variant="outline-secondary" onClick={backPage}>Назад</Button>
+            <Button variant="primary" onClick={nextPage}>Далее</Button>
+        </div> : true}
+        {stepState === 3 ? <div className={"navigation-b"}>
+            <Button variant="outline-secondary" onClick={backPage}>Назад</Button>
             <Button variant="primary" onClick={handleShow}>Завершить</Button>
             <div></div>
         </div> : true}
@@ -132,7 +136,7 @@ const Navigation = () => {
 
         {/*</div> : true}*/}
 
-        { stepState === 3 ? <div className={"navigation-b"}>
+        { stepState === 4 ? <div className={"navigation-b"}>
             <div></div>
             <Button variant="primary" onClick={() => {setStepState(0);
             }}>Пройти тест заново</Button>
