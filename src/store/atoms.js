@@ -1,7 +1,7 @@
 import {atom} from 'recoil';
 export const testFormState = atom({
     key: 'testFormState',
-    default: JSON.parse(localStorage.getItem('testFormState')) ? JSON.parse(localStorage.getItem('testFormState')) : [0, 0, 0, 0, 0, 0]
+    default: JSON.parse(localStorage.getItem('testFormState')) ? JSON.parse(localStorage.getItem('testFormState')) : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0]
 });
 
 export const testFormErrorState = atom({

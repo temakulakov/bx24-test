@@ -105,7 +105,7 @@ const Navigation = () => {
         }));
 
         localStorage.setItem("stepFormState", JSON.stringify(0));
-        localStorage.setItem("testFormState", JSON.stringify([0, 0, 0, 0, 0, 0]));
+        localStorage.setItem("testFormState", JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]));
     }
 
 

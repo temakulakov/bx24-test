@@ -35,7 +35,7 @@ axios.post("https://gagawa.bitrix24.ru/rest/9/imsk3z7t8hjyhtc2/crm.deal.list").t
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 if (localStorage.getItem('testFormState') === null) {
-    localStorage.setItem('testFormState', JSON.stringify([0, 0, 0, 0, 0, 0]));
+    localStorage.setItem('testFormState', JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]));
 
 }
 if (localStorage.getItem('stepFormState') === null) {
