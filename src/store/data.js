@@ -1,5 +1,5 @@
 export const name = [
-    "Тест по общекорпоративным компетенциям",
+    "Оценка по компетенциям",
 ];
 
 export const leftColText = [
