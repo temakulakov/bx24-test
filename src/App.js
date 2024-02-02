@@ -7,13 +7,12 @@ import {RecoilRoot} from "recoil";
 
 
 function App() {
-
   return (
       <RecoilRoot>
     <Container>
-        <Row><Header/></Row>
+        <Row style={{marginRight: "30px"}}><Header/></Row>
       <Row className={"root-content"}><Content/></Row>
-      <Row ><Col ><Navigation/></Col></Row>
+      <Row ><Col><Navigation/></Col></Row>
     </Container>
       </RecoilRoot>
   );

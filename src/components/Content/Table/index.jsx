@@ -9,7 +9,7 @@ import {testFormErrorState} from "../../../store";
 const TableComp = () => {
     const [errors, setErrors] = useRecoilState(testFormErrorState);
     return <div className={"roots"}>
-                        <h2 style={{textAlign: "center"}}>Заполните тест</h2>
+                        <h2 style={{textAlign: "center"}}>{"Общекорпоративные компетенции\n"}</h2>
                         <Table responsive="sm">
                             <thead>
                             <tr>
