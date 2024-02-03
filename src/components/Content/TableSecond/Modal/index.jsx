@@ -3,14 +3,15 @@ import React, {useEffect, useRef, useState} from "react";
 import {useRecoilState} from "recoil";
 import {testFormState} from "../../../../store";
 import {Button, Modal} from "react-bootstrap";
-import {headRowText, leftColText} from "../../../../store/data";
+import {headRowText, leftColText, leftColTextNew} from "../../../../store/data";
 
 
 const ModalComponent = (props) => {
     const [show, setShow] = useState(false);
     const [active, setActive] = useRecoilState(testFormState);
     const refSetTimeout = useRef();
-    const [hover, setHover] = useState(false)
+    const [hover, setHover] = useState(false);
+    console.log(props.theme)
     const handleShow = () => {
         setShow(true);
     };
@@ -63,7 +64,7 @@ const ModalComponent = (props) => {
         <Modal show={show} onHide={handleHide} animation={false} size={"lg"}>
             <Modal.Header closeButton>
                 {props.theme + 1 && props.level + 1 ?
-                    <Modal.Title>{leftColText[props.theme]} - {headRowText[props.level + 1]}</Modal.Title> : true}
+                    <Modal.Title>{leftColText[props.theme] ? leftColText[props.theme] : leftColTextNew[props.theme]} - {headRowText[props.level + 1]}</Modal.Title> : true}
             </Modal.Header>
             {props.children ? <Modal.Body>{props.children}</Modal.Body> : true}
             <Modal.Footer>
