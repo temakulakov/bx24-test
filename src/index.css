@@ -1,6 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+
+  font-family: "BatonTurboWeb", sans-serif;
+  font-weight:500 ;
 }
 
 body {
@@ -16,7 +19,7 @@ body {
   font-family: 'BatonTurboWeb';
   src: url('/public/fonts/BatonTurboWeb-Regular.woff2') format('woff2'),
   url('/public/fonts/BatonTurboWeb-Regular.woff') format('woff');
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
@@ -30,9 +33,11 @@ body {
   font-family: 'BatonTurboWeb';
   src: url('/public/fonts/BatonTurboWeb-RegularItalic.woff2') format('woff2'),
   url('/public/fonts/BatonTurboWeb-RegularItalic.woff') format('woff');
-  font-weight: normal;
+  font-weight: 300;
   font-style: italic;
 }
+
+
 
 button {
   background-color: #FCC01B !important;
@@ -46,6 +51,20 @@ button {
 
 button:hover {
   box-shadow: #EF4623 0px 0px 0px 3px;
+}
+
+input {
+  border: 1px white solid;
+}
+
+input:focus {
+  border-color: #FCC01B !important;
+  box-shadow: #FCC01B 0px 0px 0px 2px !important;
+}
+
+.is-invalid {
+  border-color: #EF4623 !important;
+  box-shadow: #EF4623 0px 0px 0px 2px !important;
 }
 
 table tr td {
