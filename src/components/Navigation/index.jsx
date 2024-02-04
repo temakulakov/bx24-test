@@ -96,7 +96,7 @@ const Navigation = () => {
                 state: "",
                 fio: "",
             }});
-        setTestForm(() => [0, 0, 0, 0, 0, 0]);
+        setTestForm(() => [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
 
         localStorage.setItem("inputFormState", JSON.stringify({
             error: false,

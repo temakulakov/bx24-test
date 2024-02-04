@@ -17,7 +17,7 @@
 
 .round {
     border-radius: 50%;
-    background-color:#F2F2F2 ;
+    background-color: #EF4623 ;
     width: 50px;
     height: 50px;
     cursor: pointer;
@@ -27,11 +27,11 @@
 }
 
 .active {
-    background-color:#0D6EFD ;
+    background-color:#FCC01B ;
 }
 
 .active:hover {
-    background-color: #095ED7;
+    background-color: #FCC01B;
 }
 
 @keyframes ani {
@@ -97,7 +97,7 @@ body {
     stroke-width: 2;
     stroke: white;
     stroke-miterlimit: 10;
-    box-shadow: inset 0px 0px 0px #0D6EFD;
+    box-shadow: inset 0px 0px 0px #FCC01B;
     margin: auto;
     animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
     z-index: 10;
@@ -108,7 +108,7 @@ body {
     stroke-dashoffset: 166;
     stroke-width: 2;
     stroke-miterlimit: 10;
-    stroke: #0D6EFD;
+    stroke: #FCC01B;
     fill: none;
     animation: stroke .6s ease forwards;
 }
@@ -137,7 +137,7 @@ body {
 
 @keyframes fill {
     100% {
-        box-shadow: inset 0px 0px 0px 30px #0D6EFD;
+        box-shadow: inset 0px 0px 0px 30px #FCC01B;
     }
 }
 

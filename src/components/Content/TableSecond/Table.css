@@ -30,7 +30,8 @@ td {
     /*display: flex;*/
 }
 .red td {
-    background-color: #FFCBD0 !important;
+    background-color: #EF4623 !important;
+
 }
 
 .red td:first-child {

@@ -6,12 +6,12 @@
 }
 
 .roller-bg {
-    stroke: #0D6EFD;
+    stroke: #FCC01B;
     opacity: 0.3;
 }
 
 .roller-indicator {
-    stroke: #0D6EFD;
+    stroke: #FCC01B;
     transition: all .750s ease;
 }
 

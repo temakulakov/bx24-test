@@ -2,3 +2,53 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  background-color: rgba(29, 38, 33, 0.79) !important;
+  color: #fff !important;
+}
+
+.modal-content {
+  background-color: #4C5350 !important;
+}
+
+@font-face {
+  font-family: 'BatonTurboWeb';
+  src: url('/public/fonts/BatonTurboWeb-Regular.woff2') format('woff2'),
+  url('/public/fonts/BatonTurboWeb-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BatonTurboWeb';
+  src: url('/public/fonts/BatonTurboWeb-Bold.woff2') format('woff2'),
+  url('/public/fonts/BatonTurboWeb-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BatonTurboWeb';
+  src: url('/public/fonts/BatonTurboWeb-RegularItalic.woff2') format('woff2'),
+  url('/public/fonts/BatonTurboWeb-RegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+button {
+  background-color: #FCC01B !important;
+  /*border-color: #EF4623 !important;*/
+  /*border: 1.5px solid #EF4623 !important;*/
+  color: black !important;
+  border: none !important;
+
+  transition: all .5s ease-in-out;
+}
+
+button:hover {
+  box-shadow: #EF4623 0px 0px 0px 3px;
+}
+
+table tr td {
+  background-color: rgba(252, 192, 27, 0) !important;
+  color: white !important;
+}
